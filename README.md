@@ -1,4 +1,4 @@
-#Machin Learning in Health Class
+#Machine Learning in Health Class
 
 This is the class of 2019 of the course "Machine Learning for Health Informatics" at Vienna University of Technology, Faculty of Informatics (3 ECTS, Summer Term 2019, 2 Semester hours, Study Code: 066 936 Master program Medical Informatics.
 
