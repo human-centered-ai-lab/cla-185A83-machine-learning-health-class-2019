@@ -17,15 +17,22 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 
-\title[Your Short Title]{Your Presentation}
-\author{You}
-\institute{Where You're From}
-\date{Date of Presentation}
+\title[Layer-wise Relevance Propagation (LRP) algorithm]{Machine Learning for Health Informatics}
+\author{Anna Saranti}
+\institute{Holzinger Group hci-kdd.org}
+\date{26.03.2019}
 
 \begin{document}
 
 \begin{frame}
   \titlepage
+  
+  \begin{figure}[ht]
+	\centering
+    \includegraphics[width=3cm, height=3.5cm]{figures/HddKciLogo}
+	\label{fig:HddKciLogo}
+  \end{figure}
+  
 \end{frame}
 
 % --------------------------------------------------------------------------------------------------
@@ -41,16 +48,38 @@
 \begin{frame}{Taylor Decomposition}
 
 \begin{itemize}
-  \item Redistribute the neural network output onto the input variables
-  \item Taylor expansion of a function $f(x)$ at $a$: \\
-  $f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots$ \\
-  \item $f(\mathbf{x}) = f(\tilde{\mathbf{x}}) + \big( \frac{\partial f}{\partial \mathbf{x}} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} \big)^T
+  \item Taylor expansion of a function $f(x)$ at point $a$: \\
+  $f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots$
+\end{itemize}
+
+\begin{itemize}
+  \item Classification (output) $f(\mathbf{x})$ of input $\mathbf{x}$ (1st order only): \\
+  $f(\mathbf{x}) = f(\tilde{\mathbf{x}}) + \big( \frac{\partial f}{\partial \mathbf{x}} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} \big)^T
   (\mathbf{x} - \tilde{\mathbf{x}}) + \epsilon $ \\
-  $0 + \sum_p \underbrace{\frac{\partial f}{x_p} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} (x_p - \tilde{x}_p)}_\text{$R_p(\mathbf{x})$} + \epsilon  $ 
+  $0 + \sum_p \underbrace{\frac{\partial f}{x_p} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} (x_p - \tilde{x}_p)}_\text{$R_p(\mathbf{x})$} + \epsilon  $ \\
+  where $p$ is the index of the pixel.
 \end{itemize}
 
 \end{frame}
 
+% --------------------------------------------------------------------------------------------------
+\begin{frame}{Pixel-wise decomposition of a function}
+
+\begin{itemize}
+  \item Goal: redistribute the neural network output onto the input variables
+  \item TODO: Which is the neighbouring point, 
+\end{itemize}
+
+\end{frame}
+% --------------------------------------------------------------------------------------------------
+\begin{frame}{Properties}
+
+\begin{itemize}
+  \item Conservation: $\forall \mathbf{x}: f(\mathbf{x}) = \sum_p R_p(\mathbf{x})$
+  \item Positivity: $\forall \mathbf{x}, p: R_p(\mathbf{x}) \geq 0$
+\end{itemize}
+
+\end{frame}
 % --------------------------------------------------------------------------------------------------
 \section{Example}
 \begin{frame}{Example (1/2)}
@@ -121,7 +150,7 @@ The task contains two parts
 \begin{frame}{Literature}
 
 \begin{itemize}
-	\item 
+	\item TODO Literatur
 \end{itemize}
 
 \end{frame}
