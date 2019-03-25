@@ -54,10 +54,12 @@
 
 \begin{itemize}
   \item Classification (output) $f(\mathbf{x})$ of input $\mathbf{x}$ (1st order only): \\
-  $f(\mathbf{x}) = f(\tilde{\mathbf{x}}) + \big( \frac{\partial f}{\partial \mathbf{x}} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} \big)^T
+  $f(\mathbf{x}) = f(\tilde{\mathbf{x}}) + \Bigg( \frac{\partial f}{\partial \mathbf{x}} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} \Bigg)^T
   (\mathbf{x} - \tilde{\mathbf{x}}) + \epsilon $ \\
   $0 + \sum_p \underbrace{\frac{\partial f}{x_p} \biggr\rvert_{\mathbf{x} = \tilde{\mathbf{x}}} (x_p - \tilde{x}_p)}_\text{$R_p(\mathbf{x})$} + \epsilon  $ \\
   where $p$ is the index of the pixel.
+  \item Find a neighbouring point $\tilde{\mathbf{x}}$, for which $f(\tilde{\mathbf{x}}) = 0$ 
+  \item $\sum_j R_j = \Bigg( \frac{\partial (\sum_j R_j)}{\partial{\{x_i\}}}\biggr\rvert_{\partial \{\tilde{x}_i\} } \Bigg)^T (\{x_i\} - \{\tilde{x}_i\}) + \epsilon = $ \\ $\sum_i \sum_j \frac{\partial R_j}{\partial x_i}\biggr\rvert_{\partial \{\tilde{x}_i\} } (x_i - \tilde{x}_i) + \epsilon $
 \end{itemize}
 
 \end{frame}
@@ -67,7 +69,7 @@
 
 \begin{itemize}
   \item Goal: redistribute the neural network output onto the input variables
-  \item TODO: Which is the neighbouring point, 
+  \item How to choose the neighbouring point $\tilde{x}$ ?
 \end{itemize}
 
 \end{frame}
@@ -123,7 +125,7 @@ $R_i$ of input layer:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Task description}
 
-\begin{frame}{Task}
+\begin{frame}{Task (1/2)}
 
 The task contains two parts
 \begin{enumerate}
@@ -136,9 +138,24 @@ The task contains two parts
 	\end{itemize}
 \item Programmatic task
 	\begin{itemize}
-		\item Install, run.
-		\item Change the number of training steps and see how the computed relevance changes.
-		\item Provide descriptions of the interpretations of the relevance images with respect to the input images.
+		\item Install Python 3.5.+ and the relevant libraries.
+		\item Provide descriptions of the interpretations of the relevance images with respect to the input images as well as their differences
+	\end{itemize}
+\end{enumerate}
+
+\end{frame}
+% -------------------------------------------------------------------------------------------------
+\begin{frame}{Task (2/2)}
+
+\begin{enumerate}
+\item Python libraries
+	\begin{itemize}
+		\item \url{https://www.tensorflow.org/}, \url{https://mxnet.apache.org/}
+		\item \url{https://keras.io/}
+		\item \url{https://github.com/albermax/innvestigate}
+		\item Run the \texttt{examples/readme\_code\_snippet.py} with any of the \texttt{.jpg} figures in the \texttt{examples/images} folder (line 37)
+		\item Adapt line 54 to select a different analyzer
+		\item Python IDE: \url{https://www.jetbrains.com/pycharm/}
 	\end{itemize}
 \end{enumerate}
 
@@ -150,7 +167,7 @@ The task contains two parts
 \begin{frame}{Literature}
 
 \begin{itemize}
-	\item TODO Literatur
+	\item Montavon, Grégoire, et al. "Explaining nonlinear classification decisions with deep taylor decomposition." Pattern Recognition 65 (2017): 211-222.
 \end{itemize}
 
 \end{frame}
