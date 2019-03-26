@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.9)  25 MAR 2019 01:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.9)  26 MAR 2019 01:22
 entering extended mode
 **./Presentation_Saranti.tex
 (Presentation_Saranti.tex
@@ -1000,23 +1000,35 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 ) [3
 
-] [4
-
-] [5
-
 ]
-<figures/one_layer_network.png, id=71, 417.05812pt x 201.00093pt>
+<figures/choose_x.png, id=61, 444.15938pt x 188.95593pt>
+File: figures/choose_x.png Graphic file (type png)
+<use figures/choose_x.png>
+Package pdftex.def Info: figures/choose_x.png  used on input line 83.
+(pdftex.def)             Requested size: 227.62297pt x 99.58392pt.
+ [4
+
+ <./figures/choose_x.png>]
+<figures/ReLU.png, id=68, 1029.8475pt x 468.75125pt>
+File: figures/ReLU.png Graphic file (type png)
+<use figures/ReLU.png>
+Package pdftex.def Info: figures/ReLU.png  used on input line 104.
+(pdftex.def)             Requested size: 227.62pt x 99.57791pt.
+ [5
+
+ <./figures/ReLU.png>]
+<figures/one_layer_network.png, id=77, 417.05812pt x 201.00093pt>
 File: figures/one_layer_network.png Graphic file (type png)
 <use figures/one_layer_network.png>
-Package pdftex.def Info: figures/one_layer_network.png  used on input line 100.
+Package pdftex.def Info: figures/one_layer_network.png  used on input line 120.
 
 (pdftex.def)             Requested size: 284.54398pt x 142.26385pt.
- [6
+
+[6
 
  <./figures/one_layer_network.png>] [7
 
-]
-[8
+] [8
 
 ] [9
 
@@ -1036,19 +1048,19 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 \tf@snm=\write8
 \openout8 = `Presentation_Saranti.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
  (Presentation_Saranti.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
 Package rerunfilecheck Info: File `Presentation_Saranti.out' has not changed.
 (rerunfilecheck)             Checksum: 02A17FBA8F89E7C8B818FBEB52533764;151.
  ) 
 Here is how much of TeX's memory you used:
- 18121 strings out of 493303
- 344540 string characters out of 3129785
- 427101 words of memory out of 3000000
- 21228 multiletter control sequences out of 15000+200000
+ 18135 strings out of 493303
+ 344784 string characters out of 3129785
+ 427308 words of memory out of 3000000
+ 21238 multiletter control sequences out of 15000+200000
  16116 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,14n,55p,808b,618s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1070,9 +1082,9 @@ pfb><C:/Users/mouna/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb><C:/Users/mouna/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb><C:/Users/mouna/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Presentation_Saranti.pdf (10 pages, 264238 bytes).
+Output written on Presentation_Saranti.pdf (10 pages, 313488 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 87 words of extra memory for PDF output out of 10000 (max. 10000000)
 

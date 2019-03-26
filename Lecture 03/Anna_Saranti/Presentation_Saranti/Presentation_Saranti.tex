@@ -17,7 +17,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 
-\title[Layer-wise Relevance Propagation (LRP) algorithm]{Machine Learning for Health Informatics}
+\title[Layer-wise Relevance Propagation (LRP) algorithm]{Layer-wise Relevance Propagation (LRP)\\Machine Learning for Health Informatics}
 \author{Anna Saranti}
 \institute{Holzinger Group hci-kdd.org}
 \date{26.03.2019}
@@ -49,7 +49,7 @@
 
 \begin{itemize}
   \item Taylor expansion of a function $f(x)$ at point $a$: \\
-  $f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots$
+  $f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots$
 \end{itemize}
 
 \begin{itemize}
@@ -68,18 +68,38 @@
 \begin{frame}{Pixel-wise decomposition of a function}
 
 \begin{itemize}
-  \item Goal: redistribute the neural network output onto the input variables
+  \item Goal: redistribute the neural network output onto the input variables; the relevance $R_j$ to lower-level relevances $\{R_i\}$
   \item How to choose the neighbouring point $\tilde{x}$ ?
+  \item Similar image, object not recognizable from the classifier - \\
+  hence the output $f(\tilde{\mathbf{x}}) = 0$
 \end{itemize}
+
+\begin{figure}[ht]
+	\centering
+    \includegraphics[width=8cm, height=3.5cm]{figures/choose_x}
+	\label{fig:ChooseX}
+\end{figure}
 
 \end{frame}
 % --------------------------------------------------------------------------------------------------
 \begin{frame}{Properties}
 
 \begin{itemize}
-  \item Conservation: $\forall \mathbf{x}: f(\mathbf{x}) = \sum_p R_p(\mathbf{x})$
+  \item Conservation: $\forall \mathbf{x}: f(\mathbf{x}) = \sum_p R_p(\mathbf{x})$ \\
+  $\sum_j R_j = \sum_i R_i$ ($i$ and $j$ are layers)
   \item Positivity: $\forall \mathbf{x}, p: R_p(\mathbf{x}) \geq 0$
 \end{itemize}
+
+\vspace{20px}
+
+\begin{itemize}
+  \item Rectified Linear Unit:
+\end{itemize}
+\begin{figure}[ht]
+	\centering
+    \includegraphics[width=8cm, height=3.5cm]{figures/ReLU}
+	\label{fig:ReLU}
+\end{figure}
 
 \end{frame}
 % --------------------------------------------------------------------------------------------------
@@ -109,7 +129,9 @@ $R_k$ of output layer: Total relevance that must be backpropagated:
 
 $R_j$ of hidden layer: Taylor decomposition on $\{ \tilde{x}_j \} = 0$:
 \begin{itemize}
-\item $R_j = \frac{\partial R_k}{\partial x_j} \biggr\rvert_{\{ \tilde{x}_j \}} \cdot (x_j - \tilde{x}_j) = x_j = max(0, \sum_i x_i w_{ij} + b_j)$ 
+\item $R_j = \frac{\partial R_k}{\partial x_j} \biggr\rvert_{\{ \tilde{x}_j \}} \cdot (x_j - \tilde{x}_j) = x_j = max(0, \sum_i x_i w_{ij} + b_j)$ \\
+\item Since ReLU ensures that $\{ \forall j: \tilde{x_j} \geq 0 \}$ and \\ 
+$\frac{\partial R_k}{\partial x_j} = \frac{\partial \sum_j x_j}{\partial x_j} = 1$
 \end{itemize}
 
 $R_i$ of input layer: 
@@ -131,8 +153,9 @@ The task contains two parts
 \begin{enumerate}
 \item Numerical task
 	\begin{itemize}
-		\item Use the equations above to compute numerically the relevance of all layers of the network depicted in figure \ref{fig:OneLayerNetwork}.
-		\item Use your own weight values ($w_{ij}$), but think on weighting schemes that are typically used in neural networks.
+		\item Use the equations above to compute numerically the relevance of all layers of the network depicted in the figure.
+		\item Use your own weight values ($w_{ij}$), but think on weighting schemes that are typically used in neural networks.\\
+		See \url{https://keras.io/initializers/}
 		\item Verify that the conservation and positivity rules properties apply.
 		\item Provide descriptions of the interpretations
 	\end{itemize}
