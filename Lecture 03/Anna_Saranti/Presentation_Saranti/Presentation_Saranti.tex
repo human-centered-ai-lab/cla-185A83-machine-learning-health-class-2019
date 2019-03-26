@@ -129,8 +129,9 @@ $R_k$ of output layer: Total relevance that must be backpropagated:
 
 $R_j$ of hidden layer: Taylor decomposition on $\{ \tilde{x}_j \} = 0$:
 \begin{itemize}
-\item $R_j = \frac{\partial R_k}{\partial x_j} \biggr\rvert_{\{ \tilde{x}_j \}} \cdot (x_j - \tilde{x}_j) = x_j = max(0, \sum_i x_i w_{ij} + b_j)$ \\
-\item Since ReLU ensures that $\{ \forall j: \tilde{x_j} \geq 0 \}$ and \\ 
+\item $R_j = R_k(\tilde{\mathbf{x}}) + \frac{\partial R_k}{\partial x_j} \biggr\rvert_{\{ \tilde{x}_j \}} \cdot (x_j - \tilde{x}_j) = x_j = max(0, \sum_i x_i w_{ij} + b_j)$ \\
+\item For which $\tilde{\mathbf{x}}$ is $R_k(\tilde{\mathbf{x}}) = 0$? \\ 
+Since ReLU ensures that $\{ \forall j: \tilde{x_j} \geq 0 \}$ and \\ 
 $\frac{\partial R_k}{\partial x_j} = \frac{\partial \sum_j x_j}{\partial x_j} = 1$
 \end{itemize}
 
