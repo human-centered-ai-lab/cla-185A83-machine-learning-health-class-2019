@@ -13,13 +13,15 @@ Topic 07 Probabilistic Programming
 Topic 08 Markov Chain Monte Carlo (MCMC)
 Topic 09 Example: Metropolis Hastings Algorithm
 
-    Lecture slides full size (x.xxx KB): new slides will be put online shortly after each lecture
-    Lecture slides 3 x 3 (x.xxx kB): new slides will be put online shortly after each lecture
-
-To get a preview you can have a look at the slides of the last course years: 2018, 2017, 2016
-however, please note that for the 2019 exam of course the 2019 slides are relevant
 
 Learning Goals: At the end of this lecture the students
 + are aware of reasoining and decision making
 + have an idea of graphical models
 + understand the advantages of probabilistic programming
+
+# Some special notes on Bayesian Occam's Razor:
+
+The basic Occam's razor is a problem-solving approach of the kind that "simpler solutions are more likely to be correct than complex ones." When presented with competing hypotheses to solve a problem, one should select the solution with the fewest assumptions. This can be used as abductive heuristics (note: abduction, abductive reasoning seeks to find the simplest and most likely explanation for an observation). 
+
+One justification of Occam's razor is a direct result of probability theory: The probabilistic (Bayesian) basis for Occam's razor is elaborated by David J. C. MacKay in chapter 28 of his book Information Theory, Inference, and Learning Algorithms, where he emphasizes that a prior bias in favour of simpler models is not required.
+
