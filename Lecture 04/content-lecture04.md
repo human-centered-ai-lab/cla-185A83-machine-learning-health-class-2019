@@ -27,5 +27,8 @@ One justification of Occam's razor is a direct result of probability theory: The
 
 http://www.inference.org.uk/mackay/itila
 
+http://videolectures.net/course_information_theory_pattern_recognition/
+
+
 
 
