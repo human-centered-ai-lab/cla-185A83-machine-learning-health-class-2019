@@ -8,3 +8,5 @@ Topic 03 Data – Integration, Mapping and Fusion of data
 Topic 04 Information  – Bayes and Laplace probabilistic information p(x)
 Topic 05 Information Theory – Information Entropy
 Topic 06 Information Cross-Entropy and Kullback-Leibler Divergence
+
+Data Quality is of utmost importance.
