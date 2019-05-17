@@ -2,7 +2,7 @@ Lecture Outline: Medical action is permanent decsion making under uncertainty wi
 
 Lecture Keywords: clinical decsion making, transparency, re-traceability, re-enaction, re-producibility, explainability
 
-1. Topic 01 Decison Support Systems (DSS): Can Computers help making better decisions?
+* Topic 01 Decison Support Systems (DSS): Can Computers help making better decisions?
 2. Topic 02 History of DSS = History of AI – explainable AI is actually the oldest field of Artificial Intelligence
 3. Topic 03 Medical Informatics Example: Towards P4 Medicine
 4. Topic 04 Medical Informatics Example: Case Based Reasoing (CBR)
