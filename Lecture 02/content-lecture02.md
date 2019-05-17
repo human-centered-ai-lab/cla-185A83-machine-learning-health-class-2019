@@ -11,7 +11,7 @@ Lecture Keywords: clinical decsion making, transparency, re-traceability, re-ena
 * Topic 07 (Some selected) Methods of Explainable AI
 
 Learning Goals: At the end of this lecture the students …
-+ know the roots of decision making and early concepts of medical decision support systems (Advice Taker, MYCIN, GAMUTS)
-+ see some examples of the problematic of medical decision making
-+ have a first overview on the principles of explainable AI-methods
-+ know some of the most relevant methods of explainable AI
++ know the roots of decision making and are aware of early concepts in medical decision support systems (Advice Taker, MYCIN, GAMUTS)
++ have seen some examples of the problematic and challenges of medical decision making
++ have a first rough top-level overview on the principles of explainable AI-methods
++ know some of the currently most relevant methods of explainable AI
