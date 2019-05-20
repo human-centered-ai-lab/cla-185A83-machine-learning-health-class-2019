@@ -3,18 +3,19 @@ In order to get well prepared for the second tutorial on probabilistic programmi
 
 Lecture Keywords: Reasoning under uncertainty, graph extraction, network medicine, metrics and measures, point-cloud data sets, graphical model learning, MCMC, Metropolis-Hastings Algorithm
 
-Topic 01 Reasoning/Decision Making under uncertainty
-Topic 02 Graphs > Networks
-Topic 03 Examples of Knowledge Representation in Network Medicine
-Topic 04 Graphical Models and Decision Making
-Topic 05 Bayes’ Nets
-Topic 06 Graphical Model Learning
-Topic 07 Probabilistic Programming
-Topic 08 Markov Chain Monte Carlo (MCMC)
-Topic 09 Example: Metropolis Hastings Algorithm
+- Topic 01 Reasoning/Decision Making under uncertainty
+- Topic 02 Graphs > Networks
+- Topic 03 Examples of Knowledge Representation in Network Medicine
+- Topic 04 Graphical Models and Decision Making
+- Topic 05 Bayes’ Nets
+- Topic 06 Graphical Model Learning
+- Topic 07 Probabilistic Programming
+- Topic 08 Markov Chain Monte Carlo (MCMC)
+- Topic 09 Example: Metropolis Hastings Algorithm
 
 
-Learning Goals: At the end of this lecture the students
+Learning Goals: At the end of this lecture the students ...
+
 + are aware of reasoining and decision making
 + have an idea of graphical models
 + understand the advantages of probabilistic programming
